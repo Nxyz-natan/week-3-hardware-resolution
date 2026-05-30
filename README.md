@@ -1,25 +1,28 @@
 # week-3-hardware-resolution
 # NE555 LED Blinker
 
-I'm building a 555 timer LED blinker because I wanted to learn 
-how ICs work and design my own PCB around one.
+A PCB that uses a NE555P timer IC in astable mode to automatically 
+blink an LED on and off The timing is controlled by resistors and 
+a capacitor connected to the 555 timer
 
-## May 26 - Schematic Design
+PCB Render
+<img width="732" height="450" alt="Screenshot 2026-05-29 at 6 55 55 PM" src="https://github.com/user-attachments/assets/5d6079d5-fb3a-4a78-aba4-3bb5a85d6671" />
 
-I designed the schematic for my 555 LED blinker in KiCad.
-The circuit i made used a NE555P timer in astable mode to blink an LED
-on and off automatically with The timing being controlled by resistors and a capacitor
-I ran into some issues figuring out how to wire the 555 correctly
-but eventually got it working with no ERC violations and here is the schematics 
-<img width="729" height="587" alt="Screenshot 2026-05-26 at 4 33 16 PM" src="https://github.com/user-attachments/assets/54660bb0-7a60-4c18-9571-fc082a15a39a" />
+## How it works
 
- I  routed the PCB i placed all the components down and rounded the
-corners on the board outline to make it look cleaner.
-the pcb 
-<img width="567" height="397" alt="Screenshot 2026-05-26 at 4 33 31 PM" src="https://github.com/user-attachments/assets/d8c9d287-69c6-4795-8fd7-0ee781953410" />
-pcb render 
-<img width="654" height="529" alt="Screenshot 2026-05-26 at 4 33 51 PM" src="https://github.com/user-attachments/assets/c2fed8b7-3090-474e-b09f-446dc0242951" />
+The NE555P runs in astable mode generating a continuous square wave 
+signal The frequency is determined by R4 (10k) R5 (1k), and C1 (10uF) 
+A 470Ω resistor (R6) limits current to the LED to prevent it from burning out
 
-The DRC passed with no errors.
+KiCanvas Link: https://kicanvas.org/?repo=https%3A%2F%2Fgithub.com%2FNxyz-natan%2Fweek-3-hardware-resolution%2Ftree%2Fmain%2Fsrc
 
-### Time Spent: 1 Hours
+
+
+## Schematic
+
+Schematic: <img width="830" height="563" alt="Screenshot 2026-05-29 at 6 57 49 PM" src="https://github.com/user-attachments/assets/a26e4e48-3a00-498f-8fba-46ea84f8be15" />
+
+
+## PCB
+
+PCB: <img width="936" height="600" alt="Screenshot 2026-05-29 at 6 57 31 PM" src="https://github.com/user-attachments/assets/7804812e-24bd-455b-a53b-36862f725b8a" />
